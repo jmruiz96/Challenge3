@@ -26,10 +26,10 @@ function generatePassword() {
     var availableChars = "";
     var completedPassword = "";
     // var forsureChars = "";
-  var wantUppy = confirm("Do you want to include uppercase character?")
-  var wantLowy = confirm("Do you want to include lowercase characters?")
-  var wantNumbies = confirm("Do you want to include numbers?")
-  var specialChars = confirm("Do you want to include special characters")
+  // var wantUppy = confirm("Do you want to include uppercase character?")
+  // var wantLowy = confirm("Do you want to include lowercase characters?")
+  // var wantNumbies = confirm("Do you want to include numbers?")
+  // var specialChars = confirm("Do you want to include special characters")
  
   
   var passwordLength = prompt("How long do you want password to be? (8-128)");
@@ -40,6 +40,12 @@ function generatePassword() {
     } else{ 
       alert("The length of your password needs to be at least 8 digits and at most 128 digits.");
     }
+
+      var wantUppy = confirm("Do you want to include uppercase character?")
+  var wantLowy = confirm("Do you want to include lowercase characters?")
+  var wantNumbies = confirm("Do you want to include numbers?")
+  var specialChars = confirm("Do you want to include special characters")
+ 
     
     if (wantUppy) {
       availableChars = availableChars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
