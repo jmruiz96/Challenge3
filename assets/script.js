@@ -25,33 +25,56 @@ function writePassword() {
 function generatePassword() {
     var availableChars = "";
     var completedPassword = "";
+    // var forsureChars = "";
   var wantUppy = confirm("Do you want to include uppercase character?")
   var wantLowy = confirm("Do you want to include lowercase characters?")
   var wantNumbies = confirm("Do you want to include numbers?")
   var specialChars = confirm("Do you want to include special characters")
+ 
+  
   var passwordLength = prompt("How long do you want password to be? (8-128)")
     if ((parseInt(passwordLength) >= 8) && (parseInt(passwordLength) <= 128)) {
     
     if (wantUppy) {
-      availableChars = availableChars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      availableChars = availableChars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      // forsureChars = forsureChars + getRandom(availableChars);
     }
 
     if (wantLowy) {
-      availableChars = availableChars + "abcdefghijklmnopqrstuvwxyz"
+      availableChars = availableChars + "abcdefghijklmnopqrstuvwxyz";
+      // forsureChars = forsureChars + getRandom(availableChars);
     }
 
     if (wantNumbies) {
-      availableChars = availableChars + "1234567890"
+      availableChars = availableChars + "1234567890";
+      // forsureChars = forsureChars + getRandom(availableChars);
     }
 
     if (specialChars) {
-      availableChars = availableChars + "!@#$%^&*()"
+      availableChars = availableChars + "!@#$%^&*()";
+      // forsureChars = forsureChars + getRandom(availableChars);
     }
 
+    if ((!wantUppy) && (!wantLowy) && (!wantNumbies) && (!specialChars)) {
+      alert("Come on, you have to choose one. Try again");
+    }
+    // add condition that one must be selected
+
+    // if (wantUppy) {
+    //   value.match(/^[A-Z]*$/)
+    // }
+
     for(var i = 0; i < parseInt(passwordLength); i++) {
-      var randomIndex = Math.floor(Math.random()*availableChars.length);
-      var randomChars = availableChars[randomIndex];
-      completedPassword = completedPassword + randomChars;
+      // var randomIndex = Math.floor(Math.random()*availableChars.length);
+      // var randomChars = availableChars[randomIndex];
+      completedPassword = completedPassword + getRandom(availableChars);
+
+      function getRandom(str) {
+        var randomIndex = Math.floor(Math.random()*str.length)
+        var randomChar = str.charAt(randomIndex)
+        return randomChar;
+
+      }
     }
 
     return completedPassword;
