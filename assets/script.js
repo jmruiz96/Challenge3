@@ -60,9 +60,7 @@ function generatePassword() {
     }
     // add condition that one must be selected
 
-    // if (wantUppy) {
-    //   value.match(/^[A-Z]*$/)
-    // }
+
 
     for(var i = 0; i < parseInt(passwordLength); i++) {
       // var randomIndex = Math.floor(Math.random()*availableChars.length);
@@ -80,7 +78,7 @@ function generatePassword() {
     return completedPassword;
 
   } else{ 
-    alert("The length of your password needs to be at least 8 digits and at most 128.")
+    alert("The length of your password needs to be at least 8 digits and at most 128 digits.")
   }
 }
 // generatePassword()
