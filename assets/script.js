@@ -67,9 +67,9 @@ function generatePassword() {
       // forsureChars = forsureChars + getRandom(availableChars);
     }
 
-    // if ((!wantUppy) && (!wantLowy) && (!wantNumbies) && (!specialChars)) {
-    //   alert("Come on, you have to choose one. Try again");
-    // }
+    if ((!wantUppy) && (!wantLowy) && (!wantNumbies) && (!specialChars)) {
+      alert("Come on, you have to choose one. Try again");
+    }
     // add condition that one must be selected
 
 
