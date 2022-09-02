@@ -16,6 +16,10 @@
 
 https://nu.bootcampcontent.com/NU-Coding-Bootcamp/NU-VIRT-FSF-FT-08-2022-U-LOLC
 
+https://github.com/tyleresselman
+
+Also TA's Samuel Adam and Paul Cwik 
+
 ## License
 MIT License
 
