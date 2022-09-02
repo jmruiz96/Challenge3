@@ -32,8 +32,14 @@ function generatePassword() {
   var specialChars = confirm("Do you want to include special characters")
  
   
-  var passwordLength = prompt("How long do you want password to be? (8-128)")
+  var passwordLength = prompt("How long do you want password to be? (8-128)");
+
+  
     if ((parseInt(passwordLength) >= 8) && (parseInt(passwordLength) <= 128)) {
+
+    } else{ 
+      alert("The length of your password needs to be at least 8 digits and at most 128 digits.");
+    }
     
     if (wantUppy) {
       availableChars = availableChars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -55,9 +61,9 @@ function generatePassword() {
       // forsureChars = forsureChars + getRandom(availableChars);
     }
 
-    if ((!wantUppy) && (!wantLowy) && (!wantNumbies) && (!specialChars)) {
-      alert("Come on, you have to choose one. Try again");
-    }
+    // if ((!wantUppy) && (!wantLowy) && (!wantNumbies) && (!specialChars)) {
+    //   alert("Come on, you have to choose one. Try again");
+    // }
     // add condition that one must be selected
 
 
@@ -77,9 +83,9 @@ function generatePassword() {
 
     return completedPassword;
 
-  } else{ 
-    alert("The length of your password needs to be at least 8 digits and at most 128 digits.")
-  }
+  // } else{ 
+  //   alert("The length of your password needs to be at least 8 digits and at most 128 digits.")
+  // }
 }
 // generatePassword()
 generateBtn.addEventListener("click", writePassword);
